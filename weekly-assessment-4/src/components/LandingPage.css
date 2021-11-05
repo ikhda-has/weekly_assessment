@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.overlay-container {
+  display: block;
+  height: 100%;
+  width: 50%;
+  background-image: url(img/image.jpg);
+  position: relative;
+  background-position: 80% 20%;
+}
+
+.overlay-container::before {
+  background-color: #5200ff;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+}
+
+.overlay {
+  color: #ffffff;
+  text-align: right;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 26rem;
+  margin: 12rem 7rem;
+}
+
+h1 {
+  font-family: Bebas Neue;
+  font-weight: 500;
+  font-size: 4rem;
+  height: 15rem;
+}
+
+p {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.5rem;
+  height: 5rem;
+}
+
+.form-container {
+  font-family: Poppins;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 14rem;
+}
+
+
+input {
+    width: 26rem;
+    height: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ededed;
+    border-color: #ededed;
+}
+
+label,
+input {
+  display: block;
+}
+
+button {
+  width: 11rem;
+  height: 4rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+  background-color: #5200ff;
+  color: white;
+  margin-bottom: 14rem;
+}
+
+@media (max-width: 77rem) {
+  .container {
+    flex-direction: column;
+  }
+
+  .overlay-container {
+    height: 60%;
+    width: 100%;
+  }
+
+  .overlay{
+    position: relative;
+    text-align: center;
+    width: 80v;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7rem;
+  }
+
+  input {
+    width: 19rem;
+    margin-right: 2rem;
+  }
+
+}
+
+@media (max-width: 48rem) {
+  .container {
+    display: flex;
+  }
+
+  .overlay-container{
+    height: 55%;
+    width: 100%;
+  }
+
+  .overlay {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  form {
+    display: block;
+    margin-top: 3rem;
+  }
+
+  input,
+  button {
+    width: 27rem;
+  }
+}
